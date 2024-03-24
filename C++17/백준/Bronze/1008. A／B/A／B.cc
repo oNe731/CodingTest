@@ -11,7 +11,7 @@ int main()
     cin >> A >> B;
     Result = static_cast<double>(A) / static_cast<double>(B);
 
-    cout.precision(30);
+    cout.precision(32);
     cout << Result << endl;
 
     return 0;
