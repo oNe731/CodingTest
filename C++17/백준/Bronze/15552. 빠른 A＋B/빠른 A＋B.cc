@@ -22,7 +22,7 @@ int main()
     for (size_t i = 0; i < Count; i++)
         cout << Result[i] << '\n';
 
-    cout.flush();
+    delete[] Result;
 
     return 0;
 }
