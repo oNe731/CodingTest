@@ -7,7 +7,6 @@ int main()
 {
     string input;
     cin >> input;
-
     int count = 0;
     for (int i = 0; i < input.length(); ++i)
     {
@@ -35,8 +34,6 @@ int main()
         }
         count++;
     }
-
     cout << count << endl;
-
     return 0;
 }
