@@ -4,6 +4,8 @@ using namespace std;
 
 int main()
 {
+    int Allextent = 0;
+
     int ConfettiCount;
     cin >> ConfettiCount;
 
@@ -15,17 +17,14 @@ int main()
         for (int j = Left; j < Left + 10; j++)
         {
             for (int k = Down; k < Down + 10; k++)
-                pixelUse[j][k] = true;
-        }
-    }
-
-    int Allextent = 0;
-    for (size_t i = 0; i < 100; i++)
-    {
-        for (size_t j = 0; j < 100; j++)
-        {
-            if (pixelUse[i][j] == true)
-                Allextent++;
+            {
+                if (pixelUse[j][k] == false)
+                {
+                    pixelUse[j][k] = true;
+                    Allextent++;
+                }
+            }
+                
         }
     }
 
