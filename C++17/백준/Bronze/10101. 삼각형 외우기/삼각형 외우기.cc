@@ -9,7 +9,7 @@ int main()
 
     if(A == 60 && B == 60 && C == 60)
         cout << "Equilateral" << "\n";
-    else if(A + B + C == 180 && A == B || A + B + C == 180 && A == C || A + B + C == 180 && B == C)
+    else if(A + B + C == 180 && (A == B || A == C || B == C))
         cout << "Isosceles" << "\n";
     else if (A + B + C == 180)
         cout << "Scalene" << "\n";
