@@ -2,6 +2,15 @@
 
 using namespace std;
 
+int factorial(int n)
+{
+    int Result = 1;
+    for (int i = n; i > 0; --i)
+        Result *= i;
+
+    return Result;
+}
+
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -11,22 +20,6 @@ int main()
     int InputN, InputK;
     cin >> InputN >> InputK;
 
-    int Numerator = 1;
-    for (int i = InputN; i > 0; --i)
-        Numerator *= i;
-
-    int DenominatorA = 1;
-    for (int i = InputK; i > 0; --i)
-        DenominatorA *= i;
-
-    int InputZ = InputN - InputK;
-    int DenominatorB = 1;
-    for (int i = InputZ; i > 0; --i)
-        DenominatorB *= i;
-
-    int Denominator = DenominatorA * DenominatorB;
-    int Result = Numerator / Denominator;
-
-    cout << Result << "\n";
+    cout << factorial(InputN) / (factorial(InputK) * factorial(InputN - InputK)) << "\n";
     return 0;
 }
